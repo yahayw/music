@@ -12,8 +12,9 @@ $(function(){
 
 		let items = response; //如果上传到GitHub上，这句代码就要修改成let items = JSON.parse(response);
 		let $ulCt = $('.recomSgLt .song-list');		
-		initSongList(items,$ulCt,10);	
-		$(".loading").removeClass("loading");		
+		$(".loadingCt>img").addClass("loading");	
+		initSongList(items,$ulCt,10);
+		$(".loadingCt>img").removeClass("loading");
 	})
 
 	//实现siteNav的tab切换功能
@@ -28,6 +29,7 @@ $(function(){
 	$(".nav-list>.hot").on("click",function(){
 		//Promise的方法.then()来做一件事：
 		//成功获取page2.json文件就将page2.json文件内容弄成“热歌榜的页面内容”
+		$(".loadingCt>img").addClass("loading");				
 		let $ulCt = $('.hotSgLt>.song-list');
 		if($ulCt.attr("data-songLoaded")!=="yes"){
 			$.get("./page2.json").then(function(response){
@@ -40,11 +42,11 @@ $(function(){
 					$img.attr("src",bgUrl);
 					$img.appendTo($hotCover);
 					$(".pageContent .hotSgLt").prepend($hotCover);
-					initSongList(items,$ulCt,20);//生成歌曲列表这页面中的一个部分	
+					initSongList(items,$ulCt,20);//生成歌曲列表这页面中的一个部分
+					$(".loadingCt>img").removeClass("loading");						
 					//生成底部歌曲链接
 					let $checkLink = $("<a href='#' class='checkLink'>查看完整歌单></a>")
 					$ulCt.append($checkLink);
-					$(".loading").removeClass("loading");
 				},1000)	
 		    })
 		}		
