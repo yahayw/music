@@ -35,8 +35,9 @@ $(function(){
 			$.get("./page2.json").then(function(response){
 				let {bgUrl,bgSgs} = response;
 				let items = bgSgs;
-				setTimeout(function(){
+				let timer = setTimeout(function(){
 					//生成热歌榜封面
+					timer = undefined;
 					let $hotCover = $("<div class='hotCover'></div>");
 					let $img = $("<img>");
 					$img.attr("src",bgUrl);
