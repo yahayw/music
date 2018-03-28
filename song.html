@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>歌曲播放</title>
+	<link rel="stylesheet" href="song.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+	<div class="page">
+		<div class="page-bac"></div>
+		<div class="veil"></div>
+		<div class="logo"></div>
+		<div class="disc-contain">
+			<img class="needle" src="./imgs/needle.png" alt="唱片指针">
+			<div class="disc">		
+				<svg class="icon icon-play">
+				    <use xlink:href="#icon-play"></use>
+				</svg>								
+				<svg class="icon icon-pause">
+				    <use xlink:href="#icon-pause"></use>
+				</svg>							
+				<img src="./imgs/disc_light-ip6.png" alt="圆盘上的光晕" class="lignt">
+				<img src="./imgs/disc_default.png" alt="唱片封面" class="cover">
+				<img src="./imgs/disc.png" alt="唱片黑圆盘" class="tori">
+			</div>
+		</div>
+		<div class="song-desc">
+			<h2 class="song-name">
+				<span class="singer"></span>
+			</h2> 
+			<!-- p{歌词$}*10 -->
+			<!-- <p>歌词1</p>
+			<p>歌词2</p>
+			<p>歌词3</p>
+			<p>歌词4</p>
+			<p>歌词5</p>
+			<p>歌词6</p>
+			<p>歌词7</p>
+			<p>歌词8</p>
+			<p>歌词9</p>
+			<p>歌词10</p> -->
+			<div class="lyric">
+				
+			</div>
+		</div>
+		<div class="links">
+			<a href="#" class="spec">打开</a>
+			<a href="#" class="down">下载</a>
+		</div>
+	</div>	
+
+	<script src="http://at.alicdn.com/t/font_601254_xlmdji1f39vpwrk9.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="song.js"></script>
+</body>
+</html>

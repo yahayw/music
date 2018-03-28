@@ -1,0 +1,165 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/*animation的声明*/
+@keyframes circle {
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(306deg);}
+}
+.page{
+	/*因为song页面是一个从上到下的线性布局，所以使用父元素flex布局*/
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;	
+	position: relative;
+}
+.page-bac {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -2;
+	background: no-repeat center center;
+	background-size: contain;
+}
+.veil {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.logo{
+	position: absolute;
+	width: 50vw;
+	height: 20vh;
+	top: 3vw;
+	left: 3vw;
+	background: url("imgs/song-logo.png") no-repeat;
+	background-size: 30vw auto;
+	/*border: 1px #fff solid;*/
+	z-index: 7;
+}
+.disc-contain{
+	position: relative;
+}
+.disc-contain .needle {	
+	width: 25vw;
+	margin-left: -30px;
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+}
+.disc-contain .disc {
+	margin-top: 20vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.disc-contain .tori{
+	width: 77vw;
+}
+.disc-contain .cover{
+	width: 49vw;
+	position: absolute;
+	z-index: 4;
+	border-radius: 50%;
+}
+.disc-contain .lignt{
+	width: 77vw;
+	position: absolute;
+	z-index: 3;
+}
+.disc-contain .cover,
+.disc-contain .lignt {
+	animation: circle 20s infinite linear paused;	
+}
+.disc-contain.playing .cover,
+.disc-contain.playing .lignt {
+	animation-play-state: running;
+}
+
+.icon-control {
+	z-index: 6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.disc-contain .icon {
+	position: absolute;	
+	z-index: 6;
+	width: 19vw;
+	height: 19vw;
+	padding: 0;
+	border-radius: 50%;
+	fill: #fff;
+}
+.disc-contain.playing .icon-play{
+	display: none;
+}
+.disc-contain.playing .icon-pause{
+	display: block;
+}
+.disc-contain .icon-pause {
+	display: none;
+}
+.song-desc{
+	flex-grow: 1;
+	margin: 20px;
+	text-align: center;
+	color: #F0F1F1;
+}
+.song-desc .song-name {
+	font-size: 20px;
+	margin: 4vw;
+}
+.song-desc .singer {
+	color: #A1A1A2;
+	font-size: 18px;
+}
+.song-desc>.lyric {
+	font-size: 18px;
+	line-height: 36px;
+	color: #A1A1A2;
+	height: 108px;
+	overflow: hidden;
+}
+.song-desc>.lyric>.active {
+	color: #fff;
+}
+.song-desc>.lyric>p {
+	transition: transform 0.3s;
+}
+.links{
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.links .spec,.links .down{
+	display: inline-block;
+	width: 45%;
+	text-decoration: none;
+	border-radius: 20px;
+}
+.links .spec {
+	color: #D33A31;
+	border: 1px solid;
+	padding: 6px 20px;
+}
+.links .down {
+	background: #D33A31;
+	color: #fff;
+	padding: 7px 21px;
+}
