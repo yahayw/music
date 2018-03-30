@@ -28,27 +28,25 @@ $(function(){
 	//功能：点击“热歌榜”，发送AJAX请求得到json文件，将文件内容实现成html页面
 	$(".nav-list>.hot").on("click",function(){
 		//Promise的方法.then()来做一件事：
-		//成功获取page2.json文件就将page2.json文件内容弄成“热歌榜的页面内容”
-		$(".loadingCt>img").addClass("loading");				
+		//成功获取page2.json文件就将page2.json文件内容弄成“热歌榜的页面内容”					
 		let $ulCt = $('.hotSgLt>.song-list');
 		if($ulCt.attr("data-songLoaded")!=="yes"){
 			$.get("./page2.json").then(function(response){
+				$(".loadingCt>img").addClass("loading");	
 				let {bgUrl,bgSgs} = response;
 				let items = bgSgs;
-				let timer = setTimeout(function(){
-					//生成热歌榜封面
-					timer = undefined;
-					let $hotCover = $("<div class='hotCover'></div>");
-					let $img = $("<img>");
-					$img.attr("src",bgUrl);
-					$img.appendTo($hotCover);
-					$(".pageContent .hotSgLt").prepend($hotCover);
-					initSongList(items,$ulCt,20);//生成歌曲列表这页面中的一个部分
-					$(".loadingCt>img").removeClass("loading");						
-					//生成底部歌曲链接
-					let $checkLink = $("<a href='#' class='checkLink'>查看完整歌单></a>")
-					$ulCt.append($checkLink);
-				},1000)	
+				//生成热歌榜封面
+				timer = undefined;
+				let $hotCover = $("<div class='hotCover'></div>");
+				let $img = $("<img>");
+				$img.attr("src",bgUrl);
+				$img.appendTo($hotCover);
+				$(".pageContent .hotSgLt").prepend($hotCover);
+				initSongList(items,$ulCt,20);//生成歌曲列表这页面中的一个部分
+				$(".loadingCt>img").removeClass("loading");						
+				//生成底部歌曲链接
+				let $checkLink = $("<a href='#' class='checkLink'>查看完整歌单></a>")
+				$ulCt.append($checkLink);
 		    })
 		}		
 	    $ulCt.attr("data-songLoaded","yes");

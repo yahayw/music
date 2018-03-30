@@ -75,7 +75,7 @@ $(function(){
 	    	for(let i=0; i<$p.length; i++){
 	    		if( i!==($p.length-1) && $p.eq(i).attr("data-time")<=curTime && $p.eq(i+1).attr("data-time")>curTime){
 	    			// let index = $p.eq(i).index();
-	    			console.log(i);
+	    			// console.log(i);
 	    			$p.eq(i).addClass("active");
 	    			$p.eq(i).prev().removeClass("active");
 	    		    let height = (i-1) * 36;
