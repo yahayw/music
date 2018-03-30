@@ -52,7 +52,6 @@ section>h2:first-child {
 	flex-direction: row;
 	justify-content: space-around;
 	text-align: center;
-	border-bottom: 1px solid #FCFCFC;
 }
 
 .site-nav > ol > li.reco {
