@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>歌单歌曲列表</title>
+    <link rel="stylesheet" href="./playlist.css">
 </head>
 <body>
-	<div class="pl-header">
+	<!-- <div class="pl-header">
 		<div class="cover">
 			
 		</div>
@@ -23,6 +25,35 @@
 		<ul class="song-list">
 			<h3>歌曲列表</h3>
 		</ul>
-	</div>
+	</div> -->
+	<header>
+		<div class="list-cover">
+			<div class="list-cover-bac"></div>
+			<div class="fabric"></div>
+			<div class="collect">
+				<img src="http://p61dojugl.bkt.clouddn.com/songlist-cover-1.webp" alt="">	
+				<svg class="collect-icon">
+					<use xlink:href="#icon-collect"></use>
+				</svg>
+			</div>		
+			<div class="half">
+				<p class="intro">岁月留声 · 披头士和致敬者们</p>
+				<p class="contributor">
+					<img src="" alt="" value="头像">
+					<span class="contr-id">小仙</span>
+				</p>
+			</div>
+		</div>
+		<div class="list-desc"></div>
+	</header>
+	<section>
+		<ul class="list-ct">
+			<h3>歌曲列表</h3>
+		</ul>
+	</section>
+
+    <script src="http://at.alicdn.com/t/font_601254_i3rpfgvtev2yy14i.js"></script>
+	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./playlist.js"></script>
 </body>
 </html>

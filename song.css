@@ -43,12 +43,12 @@
 
 .logo{
 	position: absolute;
-	width: 50vw;
-	height: 20vh;
-	top: 3vw;
-	left: 3vw;
+	width: 8rem;
+	height: 3.2rem;
+	top: .48rem;
+	left: .48rem;
 	background: url("imgs/song-logo.png") no-repeat;
-	background-size: 30vw auto;
+	background-size: 7rem auto;
 	/*border: 1px #fff solid;*/
 	z-index: 7;
 }
@@ -56,14 +56,14 @@
 	position: relative;
 }
 .disc-contain .needle {	
-	width: 25vw;
-	margin-left: -30px;
+	width: 5.6rem;
+	margin-left: -1.6rem;
 	position: absolute;
 	z-index: 5;
 	left: 50%;
 }
 .disc-contain .disc {
-	margin-top: 20vw;
+	margin-top: 4.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;

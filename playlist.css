@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.list-cover {
+	color: #fff;
+	font-size: .72rem;
+	position: relative;	
+	width: 16rem;
+	height: 8rem;
+	padding: 1.28rem 0.64rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.list-cover .list-cover-bac {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -2;
+	background: url("http://p61dojugl.bkt.clouddn.com/songlist-cover-1.webp") no-repeat center center;
+	background-size: cover;
+}
+.list-cover .fabric {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background-color: rgba(0,0,0,0.7);
+}
+
+.list-cover .collect img {
+	width: 5.4rem;
+	height: 5.4rem;
+}
+
+.list-cover .collect .collect-icon {
+	width: 1rem;
+	height: 1rem;
+	fill: #D75153;
+	position: absolute;
+	/*top: 1.28rem;
+	left: 0.64rem;*/
+}
+
+.list-cover .half{
+	width: 8rem;
+	height: 8rem;
+}

@@ -18,11 +18,11 @@ h3 {
 	font-weight: normal;
 }
 section>h2:first-child {
-	font-size: 4.8vw;
+	font-size: 0.8rem;
 	line-height: 1em;
-	padding-left: 2vw;
+	padding-left: 0.4rem;
 	border-left: 2px solid #D33A31;
-	margin: 8vw 0 3vw 0;
+	margin: 0.9rem 0 0.34rem 0;
 }
 .playlist,
 .latest-music {
@@ -33,18 +33,18 @@ section>h2:first-child {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 5vw 3vw;
+	padding: 0.8rem 0.48rem;
 }
 .topbar .logo {
-	width: 38vw;
+	width: 6.08rem;
 }
 .topbar .download-APP{
 	text-decoration: none;
 	color: #fff;
 	border: 1px solid;
-	line-height: 2;
-	padding: 0 2vw;
-	border-radius: 5vw;
+	line-height: 2em;
+	padding: 0 0.32rem;
+	border-radius: 0.8rem;
 }
 
 .site-nav > ol {
@@ -69,8 +69,8 @@ section>h2:first-child {
 .site-nav li span{
 	position: relative;
 	display: inline-block;
-	line-height: 2.4;
-	padding: 0 2vw;
+	line-height: 2.4em;
+	padding: 0 0.32rem;
 }
 
 .site-nav li.active span {
@@ -86,16 +86,18 @@ section>h2:first-child {
 	border-bottom: 2px solid #D43C33;
 }
 
+.pageContent {
+	border-top: 1px solid #F0F0F0;
+	background: #FCFCFD;
+}
 .pageContent>li {
 	display: none;
 }
 .pageContent>li.active {
-	display: block;latest-musi
+	display: block;
 }
 
-.playlist {
 
-}
 .playlist > ul {
 	display: flex;
 	flex-direction: row;
@@ -103,19 +105,19 @@ section>h2:first-child {
 	flex-wrap: wrap;
 }
 .playlist > ul > li {
-	width: calc(33.333333% - 0.5vw);
-	margin-bottom: 3vw;
+	width: calc(33.333333% - 0.08rem);
+	margin-bottom: 0.48rem;
 }
 .playlist .cover-pic {
 	width: 100%;
 }
 .playlist .descr {
 	padding: 2px 2px 0 6px;
-	margin-bottom: 1vw;
-	font-size: 3.4vw;
-	display: block; /* Fallback for non-webkit */
+	margin-bottom: 0.16rem;
+	font-size: 0.54rem;
+	display: block;
 	display: -webkit-box;
-	height: 2.6em; /* Fallback for non-webkit */
+	height: 2.6em;
 	line-height: 1.3em;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
@@ -124,7 +126,7 @@ section>h2:first-child {
 }
 
 .song-list{
-	padding: 2vw 0;
+	padding: 0.32rem 0;
 }
 
 .loadingCt>img.loading {
@@ -137,8 +139,8 @@ section>h2:first-child {
 }
 
 .song-list li {
-	padding-left: calc(2vw + 2px);
-	margin-bottom: 2vw ;
+	padding-left: calc(0.4rem + 2px);
+	margin-bottom: 0.32rem ;
 	position: relative;
 	border-bottom: 1px solid #F8F8F9;
 }
@@ -148,11 +150,11 @@ section>h2:first-child {
 	color: #000;
 }
 .song-list li h3 {
-	font-size: 4.6vw;
+	font-size: .74rem;
 }
 
 .song-list li p {
-	font-size: 3.3vw;
+	font-size: .53rem;
 	color: #888888;
 	display: flex;
 	align-items: center;
@@ -160,33 +162,33 @@ section>h2:first-child {
 
 .song-list li  p > svg {
 	fill: #FE672E;
-	width: 4.5vw;
-	height: 4.5vw;
+	width: .72rem;
+	height: .72rem;
 }
 
 .song-list li  a > svg {
 	fill: #888888;
-	width: 6.5vw;
-	height: 6.5vw;
+	width: 1.04rem;
+	height: 1.04rem;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	right: 3vw;
+	right: .48rem;
 }
 
 .hotSgLt .hotCover {
-	width: 100vw;
-	height: 40vw;
+	width: 16rem;
+	height: 6.4rem;
 	position: relative;
 	background: #A85A45;
 	overflow: hidden;
 }
 
 .hotSgLt .hotCover>img {
-	width: 50vw;
+	width: 8rem;
 	position: absolute;
-	top: -7vw;
-	left: -4vw;
+	top: -1.12rem;
+	left: -.64rem;
 }
 
 .hotSgLt>.song-list .checkLink {
@@ -194,12 +196,12 @@ section>h2:first-child {
 	text-align: center;
 	text-decoration: none;
 	color: #B5B5B5;
-	padding: 3vw 0;
-	font-size: 16px;
+	padding: .48vw 0;
+	font-size: .7rem;
 }
 
 .art {
-	padding-top : 17vw;
+	padding-top : 2.72vw;
 	background: url(./imgs/art-bg.png)  no-repeat center 0;/*x方向上在在中间，在x方向0开始*/
 } 
 
@@ -208,24 +210,24 @@ section>h2:first-child {
 }
 .art > .logo > .logosvg {
 	fill: red;
-	width: 56vw;
-	height: 10vw;
+	width: 8.96rem;
+	height: 1.6rem;
 }
 .art .open-APP {
 	display: block;
 	margin: 0 auto;
-	width: 82vw;
+	width: 13.12rem;
 	text-decoration: none;
 	color: #D33A31;
 	border: 1px solid;
 	text-align: center;
-	padding: 2vw 10vw;
-	border-radius: 8vw;
-	margin-top: 2.2vw;
+	padding: .32rem 1.6rem;
+	border-radius: 1.28rem;
+	margin-top: 0.35rem;
 }
 .art .copyright {
-	font-size: 2vw;
+	font-size: 0.32rem;
 	color: #B7B4B4;
 	text-align: center;
-	padding: 1vw 0 7vw 0;
+	padding: .16rem 0 1.12rem 0;
 }
