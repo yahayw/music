@@ -51,11 +51,16 @@
 	height: 1rem;
 	fill: #D75153;
 	position: absolute;
-	/*top: 1.28rem;
-	left: 0.64rem;*/
+	bottom: 1.28rem;
+	left: 0.64rem;
 }
 
 .list-cover .half{
 	width: 8rem;
-	height: 8rem;
+	height: 5.4rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.list-cover .half .contr-id {
+	color: #CEBB9F;
 }
