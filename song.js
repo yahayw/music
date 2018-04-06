@@ -71,11 +71,8 @@ $(function(){
 				second = `0${second}`;
 			}
 			curTime = minute+":"+second;
-			// console.log("minute",minute,"second",second,"curTime",curTime);
 	    	for(let i=0; i<$p.length; i++){
 	    		if( i!==($p.length-1) && $p.eq(i).attr("data-time")<=curTime && $p.eq(i+1).attr("data-time")>curTime){
-	    			// let index = $p.eq(i).index();
-	    			// console.log(i);
 	    			$p.eq(i).addClass("active");
 	    			$p.eq(i).prev().removeClass("active");
 	    		    let height = (i-1) * 36;
@@ -85,10 +82,9 @@ $(function(){
 	    			$p.eq(i).prev().removeClass("active");
 	    		}
 	        }
-	    },600);//500ms执行一次定时器已经算频繁的了，最低建议不低于300ms
+	    },600);
 	}
 	function initCoverBg(id){
-		console.log(id);
 		let $coverImg = $(".disc-contain .cover");
 		$coverImg.attr("src",`imgs/song/${id}cover.webp`);
 		let $pageBg = $(".page-bac");
