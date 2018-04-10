@@ -216,6 +216,7 @@ section>h2:first-child {
 	padding: .32rem 0;
 	font-size: .52rem;
 	border-radius: .64rem ;
+	display: flex;
 }
 .search-area svg.search-icon {
 	fill: #D1D2D2;
@@ -225,10 +226,28 @@ section>h2:first-child {
 	vertical-align: middle;
 }
 .search-area>input {
+	flex-grow: 1;
 	vertical-align: middle;
 	outline: 0;
 	border: 0;
 	background: #EBECEC;
+}
+.search .hot-search>h4{
+	padding: .47rem;
+	font-size: .43rem;
+}
+.search .hot-search .hot-list {
+	margin-left: .47rem;
+	font-size: .56rem;
+}
+.search .hot-search button {
+	display: inline-block;
+	padding: .34rem .51rem;
+	margin-right: .34rem;
+	margin-bottom: .47rem;
+	border: 1px solid #E7E8EB;
+	border-radius: .64rem;
+	background: transparent;
 }
 .art {
 	padding-top : 2.72vw;
