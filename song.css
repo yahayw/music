@@ -17,8 +17,8 @@
 	/*因为song页面是一个从上到下的线性布局，所以使用父元素flex布局*/
 	display: flex;
 	flex-direction: column;
-	width: 100vw;
-	height: 100vh;	
+	width: 16rem;
+	height: 100vh;
 	position: relative;
 }
 .page-bac {
@@ -49,7 +49,6 @@
 	left: .48rem;
 	background: url("imgs/song-logo.png") no-repeat;
 	background-size: 7rem auto;
-	/*border: 1px #fff solid;*/
 	z-index: 7;
 }
 .disc-contain{
@@ -69,16 +68,16 @@
 	align-items: center;
 }
 .disc-contain .tori{
-	width: 77vw;
+	width: 12.3rem;
 }
 .disc-contain .cover{
-	width: 49vw;
+	width: 7.85rem;
 	position: absolute;
 	z-index: 4;
 	border-radius: 50%;
 }
 .disc-contain .lignt{
-	width: 77vw;
+	width: 12.3rem;
 	position: absolute;
 	z-index: 3;
 }
@@ -100,8 +99,8 @@
 .disc-contain .icon {
 	position: absolute;	
 	z-index: 6;
-	width: 19vw;
-	height: 19vw;
+	width: 3.04rem;
+	height: 3.04rem;
 	padding: 0;
 	border-radius: 50%;
 	fill: #fff;
@@ -117,23 +116,23 @@
 }
 .song-desc{
 	flex-grow: 1;
-	margin: 20px;
+	margin: .85rem;
 	text-align: center;
 	color: #F0F1F1;
 }
 .song-desc .song-name {
-	font-size: 20px;
-	margin: 4vw;
+	font-size: .85rem;
+	margin: .64rem;
 }
 .song-desc .singer {
 	color: #A1A1A2;
-	font-size: 18px;
+	font-size: 0.769rem;
 }
 .song-desc>.lyric {
-	font-size: 18px;
-	line-height: 36px;
+	font-size: 0.769rem;
+	line-height: 1.538rem;
 	color: #A1A1A2;
-	height: 108px;
+	height: 4.615rem;
 	overflow: hidden;
 }
 .song-desc>.lyric>.active {
@@ -144,22 +143,22 @@
 }
 .links{
 	text-align: center;
-	font-size: 20px;
-	margin-bottom: 10px;
+	font-size: .85rem;
+	margin-bottom: .43rem;
 }
 .links .spec,.links .down{
 	display: inline-block;
 	width: 45%;
 	text-decoration: none;
-	border-radius: 20px;
+	border-radius: .85rem;
 }
 .links .spec {
 	color: #D33A31;
 	border: 1px solid;
-	padding: 6px 20px;
+	padding: .256rem .85rem;
 }
 .links .down {
 	background: #D33A31;
 	color: #fff;
-	padding: 7px 21px;
+	padding: .299rem .897rem;
 }

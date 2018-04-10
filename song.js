@@ -4,7 +4,6 @@ $(function(){
 		let songs = response;
 		let song = songs.filter(sn=>sn.id===id)[0];
 		let {url,name,singer,lyric} = song;
-
 		initPlayer(url); //等价于这个写法：initPlayer.call(undefined,url); 
 		initSongText.call(undefined,name,singer,lyric);		
 	})

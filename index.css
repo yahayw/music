@@ -1,21 +1,6 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-ol,
-ul {
-	list-style: none;
-}
 
 body {
 	font-size: 17px;
-}
-
-h1,
-h2,
-h3 {
-	font-weight: normal;
 }
 section>h2:first-child {
 	font-size: 0.8rem;
@@ -142,7 +127,7 @@ section>h2:first-child {
 	padding-left: calc(0.4rem + 2px);
 	margin-bottom: 0.32rem ;
 	position: relative;
-	border-bottom: 1px solid #F8F8F9;
+	border-bottom: 1px solid #F1F1F2;
 }
 .song-list .skip {
 	display: block;
@@ -184,12 +169,30 @@ section>h2:first-child {
 	overflow: hidden;
 }
 
-.hotSgLt .hotCover>img {
+.hotSgLt .hotCover .img-ct {
+	width: 100%;
+	height: 4rem;
+	margin-top: 0.7rem;
+	margin-left: .64rem;
+	overflow: hidden;
+	position: relative;
+}
+.hotSgLt .img-ct>img,
+.hotSgLt .hotCover>p{
 	width: 8rem;
 	position: absolute;
-	top: -1.12rem;
-	left: -.64rem;
+	color: #fff;
+	font-size: 0.3rem;
 }
+.hotSgLt .img-ct>img{	
+	top: -1.2rem;
+	left: -1.2rem;
+}
+.hotSgLt .hotCover>p {
+	left: .63rem;
+	bottom: 1.3rem;
+}
+
 
 .hotSgLt>.song-list .checkLink {
 	display: block;
@@ -200,6 +203,33 @@ section>h2:first-child {
 	font-size: .7rem;
 }
 
+.pageContent li.search {
+	background: #FCFCFD;
+	height: 100vh;
+}
+.search-wrap {
+	border-bottom: 1px solid #F0F1F2;	
+}
+.search-area {
+	background: #EBECEC;
+	margin: .68rem .51rem;
+	padding: .32rem 0;
+	font-size: .52rem;
+	border-radius: .64rem ;
+}
+.search-area svg.search-icon {
+	fill: #D1D2D2;
+	width: .6rem;
+	height: .6rem;
+	margin: 0 .34rem;
+	vertical-align: middle;
+}
+.search-area>input {
+	vertical-align: middle;
+	outline: 0;
+	border: 0;
+	background: #EBECEC;
+}
 .art {
 	padding-top : 2.72vw;
 	background: url(./imgs/art-bg.png)  no-repeat center 0;/*x方向上在在中间，在x方向0开始*/

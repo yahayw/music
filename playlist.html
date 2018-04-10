@@ -4,47 +4,41 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>歌单歌曲列表</title>
+	<link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="./playlist.css">
 </head>
 <body>
-	<!-- <div class="pl-header">
-		<div class="cover">
-			
-		</div>
-		<div class="desc">
-			<p class="kinds">
-				<span>华语</span>
-				<span>流行</span>
-			</p>
-			<p class="desc">
-				优质华语新歌，网易云音乐&台湾KKBOX联合推荐！每周二精选推荐。
-			</p>
-		</div>
-	</div>
-	<div class="pl-content">
-		<ul class="song-list">
-			<h3>歌曲列表</h3>
-		</ul>
-	</div> -->
 	<header>
 		<div class="list-cover">
 			<div class="list-cover-bac"></div>
 			<div class="fabric"></div>
 			<div class="collect">
 				<img src="http://p61dojugl.bkt.clouddn.com/songlist-cover-1.webp" alt="">	
-				<svg class="collect-icon">
-					<use xlink:href="#icon-collect"></use>
-				</svg>
+				<div class="icon-area">
+					<svg class="collect-icon active">
+						<use xlink:href="#icon-collect"></use>
+					</svg>
+					<svg class="collected-icon">
+						<use xlink:href="#icon-collected"></use>
+					</svg>
+				</div>
 			</div>		
 			<div class="half">
 				<p class="intro">岁月留声 · 披头士和致敬者们</p>
 				<p class="contributor">
-					<img src="" alt="" value="头像">
+					<img class="avatar" src="http://p66qxnt4v.bkt.clouddn.com/avatar.jpg" alt="用户头像">
 					<span class="contr-id">小仙</span>
 				</p>
 			</div>
 		</div>
-		<div class="list-desc"></div>
+		<div class="list-desc">
+			<p class="mark">
+				标签：
+				<button>流行</button>
+				<button>清新</button>
+			</p>
+			<p>简介：常想 如果我们在一起会是什么样的呢 想带你回家 把你介绍给我的家人 我想和你一起做饭 读书 看电影</p>
+		</div>
 	</header>
 	<section>
 		<ul class="list-ct">
@@ -52,8 +46,9 @@
 		</ul>
 	</section>
 
-    <script src="http://at.alicdn.com/t/font_601254_i3rpfgvtev2yy14i.js"></script>
+    <script src="http://at.alicdn.com/t/font_601254_pysw9e0cz8kkpgb9.js"></script>
 	<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="./dyna-rem.js"></script>
 	<script src="./playlist.js"></script>
 </body>
 </html>
