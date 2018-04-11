@@ -11,7 +11,6 @@ $(function(){
 		initCoverBg(id);
 		let audio = $("<audio src=''></audio>");
 		audio = audio[0]; //jQuery对象转换为dom对象，后面的play等方法都要求是dom对象的
-		// audio = document.createElement("audio");
 		audio.src = url;
 		let btnPause = $(".icon-pause");
 		let btnPlay = $(".icon-play");
@@ -38,7 +37,6 @@ $(function(){
 	}
 	function initSongText(songNam,singer,lyric){
 		//添加歌名、演唱者		
-		// $(".song-desc .singer").text(`${singer}-`);
 		$(".song-desc .song-name").html(`${songNam}-<span class="singer">${singer}</span>`);	
 
 		//添加歌词
@@ -89,7 +87,7 @@ $(function(){
 		let $pageBg = $(".page-bac");
 		let bgUrl = `imgs/song/${id}bg.jpg`;
 		$pageBg.css("background",`url(${bgUrl}) no-repeat center 0`);
-		$pageBg.css("background-size","auto 100vh");
+		$pageBg.css("background-size","auto 110vh");
 	}
 		
 })
