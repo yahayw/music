@@ -211,12 +211,12 @@ section>h2:first-child {
 	border-bottom: 1px solid #F0F1F2;	
 }
 .search-area {
+	position: relative;
 	background: #EBECEC;
 	margin: .68rem .51rem;
 	padding: .32rem 0;
 	font-size: .52rem;
 	border-radius: .64rem ;
-	display: flex;
 }
 .search-area svg.search-icon {
 	fill: #D1D2D2;
@@ -226,11 +226,30 @@ section>h2:first-child {
 	vertical-align: middle;
 }
 .search-area>input {
-	flex-grow: 1;
+	display: inline-block;
+	width: 13rem;
 	vertical-align: middle;
 	outline: 0;
 	border: 0;
 	background: #EBECEC;
+}
+.search-area .clear {
+	display: inline-block;
+	width: .78rem;
+	height: .78rem;
+	text-align: center;
+	line-height: 0.9em;
+	position: absolute;
+	top: 0.3rem;
+	right: 0.3rem;
+	font-size: .78rem;
+	color: #fff;
+	border-radius: 50%;
+	background: #BCBDBD;
+	transform: rotate(45deg);
+}
+.hide {
+	display: none;
 }
 .search .hot-search>h4{
 	padding: .47rem;
@@ -249,9 +268,12 @@ section>h2:first-child {
 	border-radius: .64rem;
 	background: transparent;
 }
+.search-wrap .srch-result {
+
+}
 .art {
 	padding-top : 2.72vw;
-	background: url(./imgs/art-bg.png)  no-repeat center 0;/*x方向上在在中间，在x方向0开始*/
+	background: url(./imgs/art-bg.png)  no-repeat center 0;
 } 
 
 .art .logo {
