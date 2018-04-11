@@ -86,23 +86,21 @@ $(function(){
     $("#srch-song").on('input',function(){    	
     	$(".search-area .clear").removeClass("hide");
     	$(".search .hot-search").addClass("hide");
+    	$output.removeClass("hide");  
     	let keyword = $(this).val().trim();
-    	if(keyword===""){return;}
-    	$output.removeClass("hide");    	 
+    	if(keyword===""){ return ;}
     	if(timer){
-    		clearTimeout(timer)
+    		clearTimeout(timer);    		
     	}
-	    timer = setTimeout(function(){
+	    var timer = setTimeout(function(){
 			search(keyword).then((response)=>{
 				clearTimeout(timer);
 				if(response.length!==0){
-					console.log(1);
 					$output.text("");
 					let length = response.length;
     				initSongList(response,$output,length);
-				}
+				}				
 				else {
-					console.log(2);
 					$output.text("我们网易云没有这首歌");
 				}		    			
     		});	    		
@@ -131,10 +129,17 @@ $(function(){
     	$(".search .hot-search").removeClass("hide");
     })
 
-    //点击热门搜索，显示搜索结果
+    //点击热门搜索的按钮们，显示搜索结果
     $(".search .hot-search button").on("click",function(){
     	let $this = $(this);
     	let keyword = $this.text();
-    	search(keyword);
+    	$(".search-area .clear").removeClass("hide");
+    	$(".search .hot-search").addClass("hide");
+    	$output.removeClass("hide");  
+    	search(keyword).then((response)=>{
+    		$output.text("");
+			let length = response.length;
+			initSongList(response,$output,length);
+    	})
     })
 })

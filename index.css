@@ -238,7 +238,7 @@ section>h2:first-child {
 	width: .78rem;
 	height: .78rem;
 	text-align: center;
-	line-height: 0.9em;
+	line-height: 1em;
 	position: absolute;
 	top: 0.3rem;
 	right: 0.3rem;
@@ -248,7 +248,7 @@ section>h2:first-child {
 	background: #BCBDBD;
 	transform: rotate(45deg);
 }
-.hide {
+.search .hide {
 	display: none;
 }
 .search .hot-search>h4{
