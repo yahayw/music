@@ -44,7 +44,7 @@ $(function(){
 			    $hotCover.append($p);
 				$(".pageContent .hotSgLt").prepend($hotCover);
 				initSongList(items,$ulCt,20);	
-				let $checkLink = $("<a href='#' class='checkLink'>查看完整歌单></a>")
+				let $checkLink = $("<a href='./app.html' class='checkLink'>查看完整歌单></a>")
 				$ulCt.append($checkLink);
 		    })
 		}		
