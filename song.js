@@ -75,7 +75,7 @@ $(function(){
 	    			$p.eq(i).addClass("active");
 					$p.eq(i).prev().removeClass("active");
 					let lineHeight = 1.538*rootFZ;
-	    		    let height = (i-1) * line-height;
+	    		    let height = (i-1) * lineHeight;
 	    			$p.css("transform",`translateY(-${height}px)`);
 	    		}else if(i === ($p.length-1)){
 	    			$p.eq(i).addClass("active");
