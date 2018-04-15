@@ -22,6 +22,7 @@ $(function(){
 		// 	audio.play();
 		// 	discCt.addClass("playing");
 		// }
+		discCt.removeClass("playing");		
 		btnPause.on("click",function(){
 			audio.pause();
 			discCt.removeClass("playing");
