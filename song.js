@@ -1,4 +1,6 @@
 $(function(){
+	let pageWidth = document.documentElement.clientWidth;
+	let rootFZ = pageWidth/16;
 	let id = parseInt(location.search.match(/\bid=([^&]*)/)[1]);
 	$.get("/songs.json").then(function(response){
 		let songs = response;
@@ -71,8 +73,9 @@ $(function(){
 	    	for(let i=0; i<$p.length; i++){
 	    		if( i!==($p.length-1) && $p.eq(i).attr("data-time")<=curTime && $p.eq(i+1).attr("data-time")>curTime){
 	    			$p.eq(i).addClass("active");
-	    			$p.eq(i).prev().removeClass("active");
-	    		    let height = (i-1) * 36;
+					$p.eq(i).prev().removeClass("active");
+					let lineHeight = 1.538*rootFZ;
+	    		    let height = (i-1) * line-height;
 	    			$p.css("transform",`translateY(-${height}px)`);
 	    		}else if(i === ($p.length-1)){
 	    			$p.eq(i).addClass("active");
