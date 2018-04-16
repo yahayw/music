@@ -31,6 +31,7 @@ $(function(){
 			discCt.addClass("playing");
 			scrollLyric.call(undefined,audio);	
 		})
+		//歌曲播放完毕，lyric回到初始
 		audio.onended = function(){
 			discCt.removeClass("playing");
 			$(".lyric P").css("transform",`translateY(0px)`);
@@ -73,14 +74,14 @@ $(function(){
 			curTime = minute+":"+second;
 	    	for(let i=0; i<$p.length; i++){
 	    		if( i!==($p.length-1) && $p.eq(i).attr("data-time")<=curTime && $p.eq(i+1).attr("data-time")>curTime){
-	    			$p.eq(i).addClass("active");
+					$p.eq(i).addClass("active");
 					$p.eq(i).prev().removeClass("active");
 					let lineHeight = 1.5*rootFZ;
 					let height = (i-1) * lineHeight;
-	    			$p.css("transform",`translateY(-${height}px)`);
-	    		}else if(i === ($p.length-1)){
+					$p.css("transform",`translateY(-${height}px)`);
+	    		}else if(i === ($p.length-1)&& $p.eq(i).attr("data-time")<=curTime && $p.eq(i+1).length===0){
 	    			$p.eq(i).addClass("active");
-	    			$p.eq(i).prev().removeClass("active");
+					$p.eq(i).prev().removeClass("active");
 	    		}
 	        }
 	    },600);
